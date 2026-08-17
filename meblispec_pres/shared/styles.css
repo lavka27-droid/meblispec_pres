@@ -1,0 +1,605 @@
+/* build575 (юзер: «дали шрифт для розмірів, тонкий і добре читається — міняємо у всіх
+   розмірах»): шрифт ГОСТ 2.304 (стандартний креслярський), доданий у список шрифту
+   розмірів (#pres-globalFont, pGFont() у pres_engine.js) — той самий, ЄДИНИЙ шрифт для
+   авто- і ручних розмірів (build154). */
+@font-face {
+  font-family: 'GOST2304';
+  src: url('fonts/GOST_2.304_A.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary: #2563eb;
+  --surface: rgba(255, 255, 255, 0.8);
+  --border: rgba(226, 232, 240, 0.8);
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* build470: страховка — діалог фіксованої висоти, документ НІКОЛИ не має скролитись.
+   overflow:hidden був лише на body; якщо якийсь елемент переростав 100vh, скролився <html>
+   і весь інтерфейс «з'їжджав» угору. Тепер прокрутка документа неможлива в принципі. */
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: var(--text-main);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  overflow: hidden;
+}
+
+.mode-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.mode-card-container {
+  text-align: center;
+}
+
+.mode-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.mode-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.mode-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 280px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+}
+
+.mode-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.mode-card h3 {
+  margin-bottom: 15px;
+}
+
+.mode-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+#main-area {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #b3b3b3;
+  display: flex;
+  flex-direction: column;
+}
+
+#viewport {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* A4 Sheet Style */
+#a4-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#a4-sheet {
+  background: #ffffff;
+  width: 1122px;
+  height: 794px;
+  min-width: 1122px;
+  min-height: 794px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  transform-origin: center;
+  overflow: hidden;
+}
+
+#a4-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pres wrap and Tech wrap inside content */
+#pres-wrap,
+#c-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+#svg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* A4 Footer */
+#a4-footer {
+  height: 10mm;
+  border-top: 1px solid #ccc;
+  margin: 0 5mm 5mm 5mm;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #333;
+}
+
+.footer-left {
+  flex: 1;
+  padding-left: 5px;
+}
+
+.footer-center {
+  flex: 2;
+  text-align: center;
+  font-weight: 600;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+  padding-right: 5px;
+}
+
+/* Info Overlay (Bottom Left) */
+#info-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 11px;
+  z-index: 100;
+}
+
+/* BOM */
+#bom-page {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Лист не повинен скролитись — вміст, що не влазить, іде на під-сторінку-продовження
+     («Специфікація 2/3/…», див. planBOMPagination у core.js), а не ховається під скрол. */
+  overflow: hidden;
+  background: #fff;
+  padding: 15px 20px;
+}
+
+#bom-tables-wrap {
+  display: flex;
+  gap: 0;
+  height: 100%;
+  align-items: flex-start;
+}
+
+#bom-details-col {
+  flex: 1;
+  min-width: 0;
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+
+#bom-hardware-col {
+  flex: 1;
+  min-width: 0;
+  padding-left: 10px;
+  display: none;
+}
+
+.bom-section-title {
+  font-size: 10pt;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #1e293b;
+}
+
+
+
+.hw-table th {
+  background: #fef9f0;
+}
+
+.hw-table td {
+  font-size: 7.5pt;
+}
+
+/* Таблиці специфікації: ФІКСОВАНА розкладка + перенос «Назва». Без цього довгі назви
+   фурнітури розсовували таблицю за її 50%-колонку, і права колонка «К-ть» ішла за лист
+   (обрізалась). Тепер таблиця тримається в колонці, довга назва переноситься на 2 рядки,
+   а зайву висоту вписує scaleBOMSheet. Стосується лише аркуша специфікації (#bom-page). */
+#bom-page .tech-table {
+  table-layout: fixed;
+  width: 100%;
+}
+/* build167: перенос дозволений ЛИШЕ для колонки назви (довгі назви фурнітури/деталей).
+   Раніше white-space:normal+break-word стояв на ВСІХ колонках — у вузьких числових
+   стовпцях (№, К-ть) двозначні числа переносились ПОСИМВОЛЬНО («3» над «6») — цифри
+   ставали «вертикальними» замість горизонтального прочитання. Числа й далі nowrap. */
+#bom-page .tech-table th,
+#bom-page .tech-table td {
+  white-space: nowrap;
+}
+#bom-details-col .tech-table th:first-child,
+#bom-details-col .tech-table td:first-child,
+#bom-hardware-col .tech-table th:nth-child(2),
+#bom-hardware-col .tech-table td:nth-child(2) {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* === PAGE TABS BAR === */
+#pages-bar {
+  width: 100%;
+  min-height: 32px;
+  background: #d0d0d0;
+  display: none;
+  align-items: flex-end;
+  padding: 0 6px;
+  border-bottom: 1px solid #999;
+}
+
+#pages-tabs {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  flex: 1;
+  padding-bottom: 0;
+}
+
+#pages-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+#pages-tabs::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.page-tab {
+  padding: 5px 14px;
+  background: #e4e4e4;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid #aaa;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  transition: background 0.15s;
+}
+
+.page-tab:hover {
+  background: #f0f0f0;
+}
+
+.page-tab.drag-over {
+  border: 1px dashed var(--primary);
+  background: #cbd5e1;
+}
+
+.page-tab.active {
+  background: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 2px solid #ffffff;
+  margin-bottom: -1px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.page-tab-name {
+  white-space: nowrap;
+}
+
+.page-tab-close {
+  font-size: 10px;
+  color: #64748b;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.page-tab-close:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+#btn-add-page {
+  padding: 4px 10px;
+  background: #FF9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 4px;
+  border-radius: 3px 3px 0 0;
+  align-self: flex-end;
+}
+
+#btn-add-page:hover {
+  background: #e68900;
+}
+
+/* Sidebar */
+#sidebar {
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid var(--border);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100vh; /* build470: жорстка висота = вікно, інакше грід-рядок росте під контент і overflow-y:auto НЕ вмикається → сайдбар тягне весь документ униз і <html> прокручується (весь інтерфейс «з'їжджав» угору). Тепер сайдбар скролиться ВСЕРЕДИНІ себе. */
+  min-height: 0;
+  overflow-y: auto;
+  scroll-padding-top: 72px; /* build460/467: щоб scrollIntoView (open-* команди панелі швидкого доступу) не ховав секцію під липку шапку (осн. кнопки + стовпчик прапорів, ~64px) — юзер: «ще трохи опустити» */
+  z-index: 10;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #f1f5f9;
+  border-color: var(--primary);
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.btn-small {
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn-small:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.active-btn,
+.btn-small.active-btn {
+  background: var(--primary) !important;
+  color: white !important;
+  border-color: var(--primary) !important;
+}
+
+.view-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.label-ui {
+  font-size: 9.5px;
+  color: var(--text-muted);
+  font-weight: 700;
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+input[type='range'] {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  appearance: none;
+  outline: none;
+  margin-bottom: 6px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.checkbox-row input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+}
+
+.select-ui {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  background: white;
+  color: var(--text-main);
+  font-family: inherit;
+}
+
+.select-ui:focus {
+  border-color: var(--primary);
+}
+
+.mv-slots-grid {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.mv-slot-item {
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
+.radio-group.horizontal {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px 4px;
+  font-size: 11px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.lang-btn.active {
+  background: #f8fafc;
+  border-color: #3b82f6;
+  color: #1e293b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
