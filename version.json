@@ -27,6 +27,7 @@
     { "path": "meblispec_pres/shared/quickbar.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/quickbar.js" },
     { "path": "meblispec_pres/shared/styles.css", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/styles.css" },
     { "path": "meblispec_pres/shared/three.min.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/three.min.js" },
-    { "path": "meblispec_pres/ui_loader.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/ui_loader.rbe" }
+    { "path": "meblispec_pres/ui_loader.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/ui_loader.rbe" },
+    { "path": "meblispec_pres/updater.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/updater.rbe" }
   ]
 }
