@@ -18,6 +18,7 @@
     { "path": "meblispec_pres/shared/commands.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/commands.js" },
     { "path": "meblispec_pres/shared/constants.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/constants.js" },
     { "path": "meblispec_pres/shared/core.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/core.js" },
+    { "path": "meblispec_pres/shared/drawing_dialog.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/drawing_dialog.js" },
     { "path": "meblispec_pres/shared/fonts/GOST_2.304_A.ttf", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/fonts/GOST_2.304_A.ttf" },
     { "path": "meblispec_pres/shared/html2canvas.min.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/html2canvas.min.js" },
     { "path": "meblispec_pres/shared/jspdf.umd.min.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/jspdf.umd.min.js" },
