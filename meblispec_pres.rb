@@ -5,7 +5,7 @@ module MebliSpecPRES
   unless file_loaded?(__FILE__)
     ext = SketchupExtension.new('MebliSpec PRES', 'meblispec_pres/main')
     ext.description = 'Презентація меблів у SketchUp за лічені хвилини.'
-    ext.version     = '1.0.0'
+    ext.version     = '1.0.1'
     ext.creator     = 'Lavka&SketchLab.pro'
     ext.copyright   = '2026'
     

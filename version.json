@@ -1,34 +1,125 @@
 {
-  "version": "1.0.0",
-  "files": [
-    { "path": "meblispec_pres.rb", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres.rb" },
-    { "path": "meblispec_pres/collector.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/collector.rbe" },
-    { "path": "meblispec_pres/drawing/icons/icon_k.svg", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/drawing/icons/icon_k.svg" },
-    { "path": "meblispec_pres/drawing/main.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/drawing/main.rbe" },
-    { "path": "meblispec_pres/engines/pres_engine.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/engines/pres_engine.js" },
-    { "path": "meblispec_pres/icon_pres.svg", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/icon_pres.svg" },
-    { "path": "meblispec_pres/layout_export.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/layout_export.rbe" },
-    { "path": "meblispec_pres/main.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/main.rbe" },
-    { "path": "meblispec_pres/meblispec_pres.susig", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/meblispec_pres.susig" },
-    { "path": "meblispec_pres/pres_view.html", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/pres_view.html" },
-    { "path": "meblispec_pres/presets/msp_autodraw_presets.json", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_autodraw_presets.json" },
-    { "path": "meblispec_pres/presets/msp_proj_presets.json", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_proj_presets.json" },
-    { "path": "meblispec_pres/presets/msp_sidebar_order.json", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_sidebar_order.json" },
-    { "path": "meblispec_pres/protector.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/protector.rbe" },
-    { "path": "meblispec_pres/shared/commands.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/commands.js" },
-    { "path": "meblispec_pres/shared/constants.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/constants.js" },
-    { "path": "meblispec_pres/shared/core.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/core.js" },
-    { "path": "meblispec_pres/shared/drawing_dialog.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/drawing_dialog.js" },
-    { "path": "meblispec_pres/shared/fonts/GOST_2.304_A.ttf", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/fonts/GOST_2.304_A.ttf" },
-    { "path": "meblispec_pres/shared/html2canvas.min.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/html2canvas.min.js" },
-    { "path": "meblispec_pres/shared/jspdf.umd.min.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/jspdf.umd.min.js" },
-    { "path": "meblispec_pres/shared/lang.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/lang.js" },
-    { "path": "meblispec_pres/shared/ms_modal.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/ms_modal.js" },
-    { "path": "meblispec_pres/shared/part_drawing_engine.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/part_drawing_engine.js" },
-    { "path": "meblispec_pres/shared/quickbar.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/quickbar.js" },
-    { "path": "meblispec_pres/shared/styles.css", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/styles.css" },
-    { "path": "meblispec_pres/shared/three.min.js", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/three.min.js" },
-    { "path": "meblispec_pres/ui_loader.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/ui_loader.rbe" },
-    { "path": "meblispec_pres/updater.rbe", "url": "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/updater.rbe" }
-  ]
+    "version":  "1.0.1",
+    "files":  [
+                  {
+                      "path":  "meblispec_pres.rb",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres.rb"
+                  },
+                  {
+                      "path":  "meblispec_pres/collector.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/collector.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/drawing/icons/icon_k.svg",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/drawing/icons/icon_k.svg"
+                  },
+                  {
+                      "path":  "meblispec_pres/drawing/main.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/drawing/main.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/engines/pres_engine.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/engines/pres_engine.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/icon_pres.svg",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/icon_pres.svg"
+                  },
+                  {
+                      "path":  "meblispec_pres/layout_export.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/layout_export.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/main.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/main.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/meblispec_pres.susig",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/meblispec_pres.susig"
+                  },
+                  {
+                      "path":  "meblispec_pres/pres_view.html",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/pres_view.html"
+                  },
+                  {
+                      "path":  "meblispec_pres/presets/msp_autodraw_presets.json",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_autodraw_presets.json"
+                  },
+                  {
+                      "path":  "meblispec_pres/presets/msp_proj_presets.json",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_proj_presets.json"
+                  },
+                  {
+                      "path":  "meblispec_pres/presets/msp_sidebar_order.json",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_sidebar_order.json"
+                  },
+                  {
+                      "path":  "meblispec_pres/preview_sections.html",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/preview_sections.html"
+                  },
+                  {
+                      "path":  "meblispec_pres/protector.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/protector.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/commands.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/commands.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/constants.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/constants.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/core.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/core.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/fonts/GOST_2.304_A.ttf",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/fonts/GOST_2.304_A.ttf"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/fonts/ISOCPEUR.ttf",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/fonts/ISOCPEUR.ttf"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/html2canvas.min.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/html2canvas.min.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/jspdf.umd.min.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/jspdf.umd.min.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/lang.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/lang.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/ms_modal.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/ms_modal.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/part_drawing_engine.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/part_drawing_engine.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/quickbar.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/quickbar.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/styles.css",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/styles.css"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/three.min.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/three.min.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/ui_loader.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/ui_loader.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/updater.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/updater.rbe"
+                  }
+              ]
 }
