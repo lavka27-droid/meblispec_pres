@@ -8,6 +8,22 @@
   font-weight: normal;
   font-style: normal;
 }
+/* build905 (юзер: «в pres має передаватися все точно з А4, без змін»): рушій креслення
+   (part_drawing_engine.js) вживає імена GOST2304A (весь текст) та ISOCPEUR (запас) — вікно А4 вбудовує
+   ці шрифти base64, а pres-діалог мав лише 'GOST2304' → текст підсторінки «Дет.…» падав на Arial.
+   Додаємо ТІ САМІ файли під іменами рушія, щоб креслення в pres виглядало ІДЕНТИЧНО вікну А4. */
+@font-face {
+  font-family: 'GOST2304A';
+  src: url('fonts/GOST_2.304_A.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ISOCPEUR';
+  src: url('fonts/ISOCPEUR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --primary: #2563eb;
@@ -15,6 +31,9 @@
   --border: rgba(226, 232, 240, 0.8);
   --text-main: #1e293b;
   --text-muted: #64748b;
+  /* build893: масштаб меню (шрифт+контроли інтерфейсу) — юзер: «на великих екранах текст маленький».
+     Змінюється контролом «Розмір меню» (A−/A+), персиститься глобально (msp_global_settings). */
+  --ms-ui-scale: 1;
 }
 
 * {
@@ -37,7 +56,9 @@ body {
   color: var(--text-main);
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 300px;
+  /* build893: колонка сайдбара росте разом із масштабом меню (#sidebar zoom = --ms-ui-scale),
+     щоб зумований контент 300px точно вмістився без горизонтального переповнення. */
+  grid-template-columns: 1fr calc(300px * var(--ms-ui-scale, 1));
   overflow: hidden;
 }
 
@@ -382,6 +403,26 @@ body {
   color: #ef4444;
 }
 
+/* build862: кнопки-перемикачі сторінок (‹ ›) — коли вкладок багато й вони не вміщаються */
+.page-nav-btn {
+  align-self: flex-end;
+  padding: 4px 9px;
+  margin-right: 3px;
+  background: #bdbdbd;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  border-radius: 3px 3px 0 0;
+  flex: 0 0 auto;
+}
+
+.page-nav-btn:hover {
+  background: #a5a5a5;
+}
+
 #btn-add-page {
   padding: 4px 10px;
   background: #FF9800;
@@ -409,6 +450,12 @@ body {
   flex-direction: column;
   gap: 8px;
   height: 100vh; /* build470: жорстка висота = вікно, інакше грід-рядок росте під контент і overflow-y:auto НЕ вмикається → сайдбар тягне весь документ униз і <html> прокручується (весь інтерфейс «з'їжджав» угору). Тепер сайдбар скролиться ВСЕРЕДИНІ себе. */
+  /* build893: явна ЛОГІЧНА ширина 300px + zoom масштабує ВЕСЬ сайдбар (шрифт/контроли/відступи) —
+     колонка грида = 300px*scale, тож зумований елемент точно вміщується. width:100% дітей рахується
+     від 300px логічних → все масштабується рівномірно. zoom (на відміну від transform) впливає на
+     layout: внутрішній скрол і розміри працюють коректно. */
+  width: 300px;
+  zoom: var(--ms-ui-scale, 1);
   min-height: 0;
   overflow-y: auto;
   scroll-padding-top: 72px; /* build460/467: щоб scrollIntoView (open-* команди панелі швидкого доступу) не ховав секцію під липку шапку (осн. кнопки + стовпчик прапорів, ~64px) — юзер: «ще трохи опустити» */
@@ -418,7 +465,7 @@ body {
 .sidebar-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px; /* build877: компактніше — менше «повітря» між контролами (як ok_exploded_view) */
 }
 
 .section-title {
@@ -433,13 +480,17 @@ body {
 
 .btn {
   width: 100%;
-  padding: 10px;
+  /* build877: компактний padding (~28px висоти) замість 10px — прибирає «хаос» роздутих кнопок.
+     Без min-height, щоб inline height:24/26px у рядах не ламався (min-height переміг би height). */
+  padding: 5px 8px;
+  box-sizing: border-box;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 6px;
   background: white;
   color: var(--text-main);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 1.15;
   cursor: pointer;
   transition: all 0.2s;
   text-align: center;
@@ -499,8 +550,8 @@ body {
 .radio-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 7px;
+  margin-bottom: 5px; /* build879: щільніше */
 }
 
 .radio-item {
@@ -518,7 +569,7 @@ input[type='range'] {
   border-radius: 3px;
   appearance: none;
   outline: none;
-  margin-bottom: 6px;
+  margin-bottom: 4px; /* build879: щільніше */
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -534,8 +585,8 @@ input[type='range']::-webkit-slider-thumb {
 .checkbox-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
+  gap: 7px;
+  font-size: 12px;
   font-weight: 500;
   cursor: pointer;
 }
@@ -548,10 +599,12 @@ input[type='range']::-webkit-slider-thumb {
 
 .select-ui {
   width: 100%;
-  padding: 4px 8px;
+  height: 28px; /* build877: єдина висота випадайок = кнопкам */
+  padding: 3px 8px;
+  box-sizing: border-box;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 13px;
+  border-radius: 6px;
+  font-size: 12px;
   outline: none;
   background: white;
   color: var(--text-main);

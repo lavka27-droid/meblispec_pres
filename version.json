@@ -1,5 +1,5 @@
 {
-    "version":  "1.0.1",
+    "version":  "1.0.2",
     "files":  [
                   {
                       "path":  "meblispec_pres.rb",
@@ -24,10 +24,6 @@
                   {
                       "path":  "meblispec_pres/icon_pres.svg",
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/icon_pres.svg"
-                  },
-                  {
-                      "path":  "meblispec_pres/layout_export.rbe",
-                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/layout_export.rbe"
                   },
                   {
                       "path":  "meblispec_pres/main.rbe",
