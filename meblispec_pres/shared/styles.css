@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'GOST2304';
   src: url('fonts/GOST_2.304_A.ttf') format('truetype');
+  unicode-range: U+0000-00BF, U+0100-10FFFF; /* build1164: Ø/× у шрифті = Ш/Ч (cp1251) — беремо з наступного шрифту */
   font-weight: normal;
   font-style: normal;
 }
@@ -15,6 +16,7 @@
 @font-face {
   font-family: 'GOST2304A';
   src: url('fonts/GOST_2.304_A.ttf') format('truetype');
+  unicode-range: U+0000-00BF, U+0100-10FFFF; /* build1164: Ø/× у шрифті = Ш/Ч (cp1251) — беремо з наступного шрифту */
   font-weight: normal;
   font-style: normal;
 }
@@ -268,6 +270,20 @@ body {
   min-width: 0;
   border-right: 1px solid #ccc;
   padding-right: 10px;
+}
+
+/* build1257: без колонки фурнітури — таблиця деталей на половину аркуша (клас ставить _bomSyncHalfWidth у core.js) */
+#bom-details-col.ms-half {
+  flex: 0 0 50%;
+  max-width: 50%;
+  border-right: none;
+  padding-right: 0;
+}
+
+/* build1257: легенда матеріалів — лише на 3D-виді, не на аркушах специфікації й креслень (клас ставить switchSubView) */
+#a4-sheet.ms-sub-bom #pres-legend,
+#a4-sheet.ms-sub-drawing #pres-legend {
+  display: none !important;
 }
 
 #bom-hardware-col {

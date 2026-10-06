@@ -1,5 +1,5 @@
 {
-    "version":  "1.0.2",
+    "version":  "1.0.3",
     "files":  [
                   {
                       "path":  "meblispec_pres.rb",
@@ -42,6 +42,10 @@
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_autodraw_presets.json"
                   },
                   {
+                      "path":  "meblispec_pres/presets/msp_frame_presets.json",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_frame_presets.json"
+                  },
+                  {
                       "path":  "meblispec_pres/presets/msp_proj_presets.json",
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_proj_presets.json"
                   },
@@ -50,12 +54,12 @@
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_sidebar_order.json"
                   },
                   {
-                      "path":  "meblispec_pres/preview_sections.html",
-                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/preview_sections.html"
-                  },
-                  {
                       "path":  "meblispec_pres/protector.rbe",
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/protector.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/a4_tools.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/a4_tools.js"
                   },
                   {
                       "path":  "meblispec_pres/shared/commands.js",
@@ -92,6 +96,10 @@
                   {
                       "path":  "meblispec_pres/shared/ms_modal.js",
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/ms_modal.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/nat_samples.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/nat_samples.js"
                   },
                   {
                       "path":  "meblispec_pres/shared/part_drawing_engine.js",
