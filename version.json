@@ -1,5 +1,5 @@
 {
-    "version":  "1.0.3",
+    "version":  "1.0.4",
     "files":  [
                   {
                       "path":  "meblispec_pres.rb",
@@ -52,6 +52,10 @@
                   {
                       "path":  "meblispec_pres/presets/msp_sidebar_order.json",
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_sidebar_order.json"
+                  },
+                  {
+                      "path":  "meblispec_pres/presets/msp_text_presets.json",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/presets/msp_text_presets.json"
                   },
                   {
                       "path":  "meblispec_pres/protector.rbe",
