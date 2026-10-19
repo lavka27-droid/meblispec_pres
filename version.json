@@ -1,5 +1,5 @@
 {
-    "version":  "1.0.5",
+    "version":  "1.0.6",
     "files":  [
                   {
                       "path":  "meblispec_pres.rb",
@@ -22,8 +22,44 @@
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/engines/pres_engine.js"
                   },
                   {
+                      "path":  "meblispec_pres/frame_catalog.json",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/frame_catalog.json"
+                  },
+                  {
+                      "path":  "meblispec_pres/frame_facade.html",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/frame_facade.html"
+                  },
+                  {
+                      "path":  "meblispec_pres/frame_facade.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/frame_facade.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/icon_frame.svg",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/icon_frame.svg"
+                  },
+                  {
+                      "path":  "meblispec_pres/icon_lock.svg",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/icon_lock.svg"
+                  },
+                  {
                       "path":  "meblispec_pres/icon_pres.svg",
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/icon_pres.svg"
+                  },
+                  {
+                      "path":  "meblispec_pres/icon_viyar_114.png",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/icon_viyar_114.png"
+                  },
+                  {
+                      "path":  "meblispec_pres/icon_viyar_72.png",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/icon_viyar_72.png"
+                  },
+                  {
+                      "path":  "meblispec_pres/licenses.json",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/licenses.json"
+                  },
+                  {
+                      "path":  "meblispec_pres/lock_tool.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/lock_tool.rbe"
                   },
                   {
                       "path":  "meblispec_pres/main.rbe",
@@ -64,6 +100,10 @@
                   {
                       "path":  "meblispec_pres/shared/a4_tools.js",
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/a4_tools.js"
+                  },
+                  {
+                      "path":  "meblispec_pres/shared/batch_sheets.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/shared/batch_sheets.js"
                   },
                   {
                       "path":  "meblispec_pres/shared/commands.js",
@@ -128,6 +168,18 @@
                   {
                       "path":  "meblispec_pres/updater.rbe",
                       "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/updater.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/viyar_export.rbe",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/viyar_export.rbe"
+                  },
+                  {
+                      "path":  "meblispec_pres/viyar_profiles_cache.json",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/viyar_profiles_cache.json"
+                  },
+                  {
+                      "path":  "meblispec_pres/viyar_sjcl.js",
+                      "url":  "https://raw.githubusercontent.com/lavka27-droid/meblispec_pres/main/meblispec_pres/viyar_sjcl.js"
                   }
               ]
 }

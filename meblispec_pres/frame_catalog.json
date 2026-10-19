@@ -1,0 +1,543 @@
+{
+  "_note": "Каталог рамкових алюмінієвих фасадів (ViyarPro, профіль R-4). Дані знято з конструктора «Рамкові алюмінієві» 2026-10-11. Свої варіанти (інший постачальник) додаються через вікно «Рамковий фасад» і лежать у %APPDATA%\\MebliSpec\\frame_catalog_user.json.",
+  "profiles": [
+    {
+      "code": "R-4",
+      "label": "R-4",
+      "supplier": "Віяр",
+      "art": "058",
+      "category": "Категорія 1",
+      "thickness": 20
+    },
+    {
+      "code": "Р30",
+      "label": "Р30 Dekor Pro",
+      "supplier": "Dekor Pro",
+      "note": "Лише назва профілю (dekor.ua, «Рамковий профіль»). Ціни звіту, ліміти розмірів і експорт у ViyarPro розраховані під R-4."
+    },
+    {
+      "code": "Р31",
+      "label": "Р31 Dekor Pro",
+      "supplier": "Dekor Pro"
+    },
+    {
+      "code": "Р32",
+      "label": "Р32 Dekor Pro",
+      "supplier": "Dekor Pro"
+    },
+    {
+      "code": "Р33",
+      "label": "Р33 Dekor Pro",
+      "supplier": "Dekor Pro"
+    },
+    {
+      "code": "Р34",
+      "label": "Р34 Dekor Pro",
+      "supplier": "Dekor Pro"
+    }
+  ],
+  "colors": [
+    {
+      "art": "1152",
+      "name": "Білий матовий (гладкий)",
+      "hex": "#f3f3ee"
+    },
+    {
+      "art": "3687",
+      "name": "Срібло матове",
+      "hex": "#c8cacc"
+    },
+    {
+      "art": "3688",
+      "name": "Бронза матова",
+      "hex": "#4a3226"
+    },
+    {
+      "art": "3689",
+      "name": "Срібло браш поліроване",
+      "hex": "#b8babd"
+    },
+    {
+      "art": "3690",
+      "name": "Срібло поліроване",
+      "hex": "#d4d6d8"
+    },
+    {
+      "art": "3691",
+      "name": "Графіт браш поліроване",
+      "hex": "#2d3135"
+    },
+    {
+      "art": "3692",
+      "name": "Чорний браш полірований",
+      "hex": "#1c1c1e"
+    },
+    {
+      "art": "3693",
+      "name": "Чорний матовий",
+      "hex": "#151516"
+    },
+    {
+      "art": "3694",
+      "name": "Шампань браш",
+      "hex": "#cdc6ae"
+    },
+    {
+      "art": "3943",
+      "name": "Золото поліроване",
+      "hex": "#d6b155"
+    },
+    {
+      "art": "0002",
+      "name": "Браш бронза",
+      "hex": "#6a553f"
+    },
+    {
+      "art": "0003",
+      "name": "Браш нікель",
+      "hex": "#c3b7a8"
+    }
+  ],
+  "fill_types": [
+    "Дзеркало",
+    "Lacobel",
+    "Matelac",
+    "Скло фасадне",
+    "Lacomat",
+    "Свій варіант"
+  ],
+  "fillings": [
+    {
+      "type": "Дзеркало",
+      "art": "81170",
+      "name": "Дзеркало бронза (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "91684",
+      "name": "Дзеркало графіт (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "89418",
+      "name": "Дзеркало сатин (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "75363",
+      "name": "Дзеркало Срібло на діаманті (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "69532",
+      "name": "Дзеркало сатин графіт (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "69537",
+      "name": "Дзеркало сатин бронза (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "138589",
+      "name": "Дзеркало срібло Bg 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "228617",
+      "name": "Дзеркало срібло Rexi Glass (A) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "91892",
+      "name": "Дзеркало MORENA (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "127485",
+      "name": "Дзеркало срібло вологостійке 4 мм AGC (Європа)",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "190378",
+      "name": "Дзеркало сатин (Україна) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "190379",
+      "name": "Дзеркало сатин бронза (Україна) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "190380",
+      "name": "Дзеркало сатин графіт (Україна) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "265759",
+      "name": "Дзеркало бронза Rexi Glass 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Дзеркало",
+      "art": "265760",
+      "name": "Дзеркало графіт Rexi Glass 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "47775",
+      "name": "Скло Lacobel Classic Black 9005 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "47776",
+      "name": "Скло Lacobel Pure White 9003 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "47777",
+      "name": "Скло Lacobel Pearl White 1013 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "47778",
+      "name": "Скло Lacobel Light Beige 1015 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "47779",
+      "name": "Скло Lacobel Light Brown 1236 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "47780",
+      "name": "Скло Lacobel Natural Brown 7013 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "47781",
+      "name": "Скло Lacobel Authentic Anthracite 7016 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "49221",
+      "name": "Скло Lacobel Soft White 9010 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "49223",
+      "name": "Скло Lacobel Classic Grey 7035 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "58614",
+      "name": "Скло Lacobel Clearvision Taupe 0627 (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "187319",
+      "name": "Скло Lacobel RAL 9005 чорний 4 мм (Україна)",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "187321",
+      "name": "Скло Lacobel RAL 9003 \"А\" ексклюзивний білий 4 мм (Україна)",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "291200",
+      "name": "Скло Lacobel RAL 1013 (Україна) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacobel",
+      "art": "291201",
+      "name": "Скло Lacobel RAL 1015 (Україна) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Matelac",
+      "art": "84795",
+      "name": "Скло Matelac Black Classic 9005 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Matelac",
+      "art": "84796",
+      "name": "Скло Matelac Brown Natural 7013 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Matelac",
+      "art": "60592",
+      "name": "Скло Matelac Pearl White 1013 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Matelac",
+      "art": "60593",
+      "name": "Скло Matelac White Pure 9003 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Matelac",
+      "art": "118091",
+      "name": "Скло Matelac Soft White 9010 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "116668",
+      "name": "Скло сатин білий двосторонній 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "116669",
+      "name": "Скло сатин білий двосторонній на діаманті 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "30049",
+      "name": "Скло тоноване графіт 4 мм (AGC)",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "20829",
+      "name": "Скло діамант 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "95978",
+      "name": "Скло сатин бронза 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "81152",
+      "name": "Скло сатин білий 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "43489",
+      "name": "Скло віконне 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "74258",
+      "name": "Скло сатин білий на діаманті 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "96910",
+      "name": "Скло флутс матований (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "68337",
+      "name": "Скло Planibel Dark Grey 4 мм (AGC)",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "68338",
+      "name": "Скло Imagin Raywall (AGC) 45 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "69539",
+      "name": "Скло сатин графіт AGC 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "168882",
+      "name": "Скло Master Ligne 4 мм Saint Gobain",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "168883",
+      "name": "Скло Master Thela 4 мм Saint Gobain",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "169229",
+      "name": "Скло Trix графіт 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "169230",
+      "name": "Скло Trix бронза 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "169231",
+      "name": "Скло Trix прозоре 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "197257",
+      "name": "Скло тоноване графіт (Україна) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "200502",
+      "name": "Скло тоноване бронза (Україна) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "96761",
+      "name": "Скло флутс прозорий (AGC) 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213737",
+      "name": "Скло Rigato прозоре 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213738",
+      "name": "Скло Rigato бронза 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213739",
+      "name": "Скло Rigato графіт 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213741",
+      "name": "Скло Strip бронза 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213742",
+      "name": "Скло Strip графіт 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213743",
+      "name": "Скло Graffiti бронза 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213744",
+      "name": "Скло Graffiti графіт 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213746",
+      "name": "Скло Ecosat матове прозоре 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213747",
+      "name": "Скло Ecosat матове бронза 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213748",
+      "name": "Скло Ecosat матове графіт 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "213749",
+      "name": "Скло sky blue 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "64089",
+      "name": "Скло Stopsol Classic Clear 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "64090",
+      "name": "Скло Stopsol Classic графіт 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "64091",
+      "name": "Скло Stopsol Classic бронзове 4 мм",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Скло фасадне",
+      "art": "27125",
+      "name": "Скло тоноване бронза 4 мм (AGC)",
+      "supplier": "Віяр"
+    },
+    {
+      "type": "Lacomat",
+      "art": "63996",
+      "name": "Скло Lacomat White 1456 4 мм",
+      "supplier": "Віяр"
+    }
+  ],
+  "limits": {
+    "min": [
+      125,
+      140
+    ],
+    "max": [
+      2000,
+      3100
+    ],
+    "hinge_indent": 60,
+    "hinge_edge": 22.5
+  }
+}
