@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- фасад + профіль-ручка Gola на верхньому торці -->
+  <rect x="4" y="7" width="16" height="14" rx="1" fill="#e5d3b0" stroke="#5b4a2e" stroke-width="1.2"/>
+  <path d="M3 3.5h18v3.2H3z" fill="#b0b4ba" stroke="#3f4650" stroke-width="1.1"/>
+  <path d="M5 6.7v-1.2h14v1.2" fill="none" stroke="#3f4650" stroke-width="0.9"/>
+</svg>

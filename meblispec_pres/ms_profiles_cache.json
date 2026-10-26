@@ -161,5 +161,13 @@
     "name": "Профіль для LED-стрічки, ВРІЗНИЙ LPV-7A, анодоване срібло  L = 2м",
     "slug": "profil_dlya_led_lenty_vreznoy_lpv_7a_anodirovannoe_serebro_l_2m",
     "pog": false
+  },
+  "50741": {
+    "article": "50741",
+    "id": "f986a271-8458-11e8-a336-005056b13af7",
+    "materialUuid": "f986a271-8458-11e8-a336-005056b13af7",
+    "name": "Комплект вкладний SlideLine M для 2-х дверей від 450мм з демпфером, дводоріжковий профіль",
+    "slug": "komplekt_dlya_2_kh_dverey_ot_450mm_s_dempferom_dvukhdorozhechnyy_profil",
+    "pog": false
   }
 }
